@@ -1,7 +1,7 @@
 # DDPM
 
 This is the implementation of [Denoising Diffusion Probabilistic Model](https://arxiv.org/abs/2006.11239) in PyTorch with training and inference parts from scratch.
-
+img src="./images/ddpm.png"
 
 # Quick Start
 * Create a new conda environment with python 3.8 then run below commands
@@ -23,7 +23,7 @@ The trained checkpoints will be saved in checkpoints folder during the training.
 
 The generated images are saved in outcomes folder after running the inference mode.
 
-Here are some results on MNIST dataset:
+Here are some results generated respecting to MNIST dataset:
 
 <table>
   <tr>
@@ -51,3 +51,7 @@ Here are some results on MNIST dataset:
     <td> <img src="./images/9910.jpg" alt="10" width = 36px height = 36px ></td>
   </tr> 
 </table>
+
+
+# Configuration
+* config.yml - Allows you to play with different components of ddpm
