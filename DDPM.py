@@ -385,11 +385,12 @@ class UNet(nn.Module):
 
 
 
-###-----------------   Implementation Improvement of MultiHeadAttention -----------------------------
-# If we just use multihead attention as it mention in the examples of DDPM, we will face cuda memory overflow
-# to address this issue, we should change the input format of multihead by reshaping. In the original format it takes the input as the 
-#h*w samples with feature length channels, we have changed it to h*w/16*16 sample (VIT format) with the feature size of channels*16*16 
-
+#         ----------------- Improved MultiHeadAttention Implementation -----------------------------
+# Using MultiHeadAttention as shown in original DDPM implementation can cause CUDA memory overflow, especially with high-resolution inputs.
+# To fix this, I've changed the input format by reshaping it. Normally, the input is shaped as h * w and channels are considered as features.
+#  Instead, I've splited the input into P×P patches (like in Vision Transformers), 
+#  so we have fewer tokens (h * w / p * p) but each one has more features (channels * p * p).
+# This helps reduce memory usage while still keeping useful information.
 
 
 
