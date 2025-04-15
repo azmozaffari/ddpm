@@ -14,6 +14,14 @@ This is the implementation of [Denoising Diffusion Probabilistic Model](https://
 
 * For training/inference use the below commands passing the desired configuration file as the config argument in case you want to play with it.
 
-* python main.py --config "path/to/config/file" --mode training       for training ddpm
+* python3 main.py --config "path/to/config/file" --mode training       for training ddpm
 
-* python main.py --config "path/to/config/file" --mode inference      for generating images
+* python3 main.py --config "path/to/config/file" --mode inference      for generating images
+
+# Results
+The trained checkpoints will be saved in checkpoints folder during the training.
+
+The generated images are saved in outcomes folder after running the inference mode.
+
+Here are some results on MNIST dataset:
+
