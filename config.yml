@@ -1,0 +1,53 @@
+model:
+  Unet:
+    depth: 3
+    patch_size: 4  # In attention module I used ViT model and patchified the input before applying attention
+    # The input size in all layers should be dividable by the patch size. If I do not apply Patchifying I will get CUDA memory error!
+    DownBlock:
+        in_channel: [1, 32, 32]
+        out_channel: [32, 32, 32]
+        t_emb_dim: 10
+        num_heads: [4, 4, 4]
+        num_layers: [3, 3, 1]
+        group_norm: [1, 4, 4]
+    
+    MidBlock:
+        in_channel: 32
+        out_channel: 32
+        t_emb_dim: 10
+        num_heads: 4
+        num_layers: 1
+        group_norm: 4
+
+    UpBlock:
+        in_channel: [64, 64, 64]
+        out_channel: [32, 32, 1]
+        t_emb_dim: 10
+        num_heads: [4, 4, 4]
+        num_layers: [3, 3, 1]
+        group_norm: [4, 4, 1]
+    
+
+
+
+LinearNoiseScheduler:
+    time_steps: 1000
+    beta_start: 0.0001
+    beta_end: 0.01
+    t_emb_dim: 10
+
+
+
+training:
+  epochs: 1000
+  lr: 0.0001
+  model_path: "./checkpoints/"
+  dataset: "MNIST" # or  CelebA
+
+test:
+  model_path: "./checkpoints/ckpt700.pth"
+
+data:
+  data_root: 'data/datasets'
+  image_size: 32
+  batch_size: 128
