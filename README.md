@@ -29,13 +29,13 @@ Here are some results on MNIST dataset:
   <tr>
     <td> <img src="./images/1.jpg"  alt="1" width = 36px height = 36px ></td>
     <td> <img src="./images/111.jpg"  alt="2" width = 36px height = 36px ></td>    
-    <td> <img src="./images/img/221.jpg" alt="3" width = 36px height = 36px></td>    
-    <td> <img src="./images/img/331.jpg" alt="4" width = 36px height = 36px></td>    
-    <td> <img src="./images/img/441.jpg" alt="5" width = 36px height = 36px></td>    
-    <td> <img src="./images/img/551.jpg" alt="6" width = 36px height = 36px></td>    
-    <td> <img src="./images/img/661.jpg" alt="7" width = 36px height = 36px></td>    
-    <td> <img src="./images/img/771.jpg" alt="8" width = 36px height = 36px></td>    
-    <td> <img src="./images/img/881.jpg" alt="9" width = 36px height = 36px></td>    
-    <td> <img src="./images/img/991.jpg" alt="10" width = 36px height = 36px></td>
+    <td> <img src="./images/img/221.jpg" alt="3" width = 36px height = 36px ></td>    
+    <td> <img src="./images/img/331.jpg" alt="4" width = 36px height = 36px ></td>    
+    <td> <img src="./images/img/441.jpg" alt="5" width = 36px height = 36px ></td>    
+    <td> <img src="./images/img/551.jpg" alt="6" width = 36px height = 36px ></td>    
+    <td> <img src="./images/img/661.jpg" alt="7" width = 36px height = 36px ></td>    
+    <td> <img src="./images/img/771.jpg" alt="8" width = 36px height = 36px ></td>    
+    <td> <img src="./images/img/881.jpg" alt="9" width = 36px height = 36px ></td>    
+    <td> <img src="./images/img/991.jpg" alt="10" width = 36px height = 36px ></td>
   </tr> 
 </table>
