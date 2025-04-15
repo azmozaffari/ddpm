@@ -27,14 +27,14 @@ Here are some results on MNIST dataset:
 
 <table>
   <tr>
-    <td> <img src="img1.png"  alt="1" width = 360px height = 640px ></td>
-
-    <td><img src="img2.png" alt="2" width = 360px height = 640px></td>
+    <td> <img src="./images/111.jpg"  alt="1" width = 360px height = 640px ></td>
+    <td><img src="./images/img/221.jpg" alt="2" width = 360px height = 640px></td>
+    <td><img src="./images/img/331.jpg" alt="2" width = 360px height = 640px></td>
+    <td><img src="./images/img/441.jpg" alt="2" width = 360px height = 640px></td>
+    <td><img src="./images/img/551.jpg" alt="2" width = 360px height = 640px></td>
+    <td><img src="./images/img/661.jpg" alt="2" width = 360px height = 640px></td>
+    <td><img src="./images/img/771.jpg" alt="2" width = 360px height = 640px></td>
+    <td><img src="./images/img/881.jpg" alt="2" width = 360px height = 640px></td>
+    <td><img src="./images/img/991.jpg" alt="2" width = 360px height = 640px></td>
    </tr> 
-   <tr>
-      <td><img src="./Scshot/cab_arrived.png" alt="3" width = 360px height = 640px></td>
-
-      <td><img src="./Scshot/trip_end.png" align="right" alt="4" width = 360px height = 640px>
-  </td>
-  </tr>
 </table>
