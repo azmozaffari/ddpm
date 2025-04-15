@@ -1,7 +1,3 @@
-# implementing DDPM   
-
-# This is Unet model that takes time as the input and not the text
-
 import torch
 from PIL import Image
 from torchvision import transforms
@@ -12,7 +8,7 @@ import yaml
 
 
 
-
+# Time embedding function
 def get_time_embedding(time_steps, temb_dim):
 
     assert temb_dim % 2 == 0, "time embedding dimension must be divisible by 2"
