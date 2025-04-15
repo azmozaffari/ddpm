@@ -4,9 +4,9 @@ This is the implementation of [Denoising Diffusion Probabilistic Model](https://
 
 
 # Quick Start
-*Create a new conda environment with python 3.8 then run below commands
+* Create a new conda environment with python 3.8 then run below commands
 
-*git clone https://github.com/azmozaffari/ddpm.git
+* git clone https://github.com/azmozaffari/ddpm.git
 
 *cd ddpm
 
