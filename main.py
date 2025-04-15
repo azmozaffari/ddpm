@@ -12,7 +12,7 @@ import os
 def parse_args_and_config():
     parser = argparse.ArgumentParser(description=globals()['__doc__'])
     parser.add_argument('--config', type=str, required=True, help='Path to the config file')
-    parser.add_argument('--mode', type=str, required=True, help='training or test')
+    parser.add_argument('--mode', type=str, required=True, help='training or inference')
     args = parser.parse_args()
     return args
 
@@ -108,9 +108,9 @@ def training(config, device):
 
 
 
-# -----------------------------------------           Test         --------------------------------------------------
+# -----------------------------------------           Inference         --------------------------------------------------
 
-def test(config, device):
+def inference(config, device):
 
     # Initialize the model
     unet = UNet(config).to(device)
@@ -170,7 +170,7 @@ if __name__ == '__main__':
         config = dict2namespace(config)
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
-    if args.mode == "test":
+    if args.mode == "inference":
         test(config, device)
     if args.mode == "training":
         training(config, device)
