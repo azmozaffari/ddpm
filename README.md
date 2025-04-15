@@ -1,7 +1,10 @@
 # DDPM
 
 This is the implementation of [Denoising Diffusion Probabilistic Model](https://arxiv.org/abs/2006.11239) in PyTorch with training and inference parts from scratch.
+
+
 ![plot](./images/denoising-diffusion.png)
+
 
 # Quick Start
 * Create a new conda environment with python 3.8 then run below commands
