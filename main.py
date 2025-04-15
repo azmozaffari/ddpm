@@ -7,6 +7,8 @@ from torch.utils.data import Dataset, DataLoader
 from DDPM import *
 import torch.optim as optim
 import numpy
+import os
+
 def parse_args_and_config():
     parser = argparse.ArgumentParser(description=globals()['__doc__'])
     parser.add_argument('--config', type=str, required=True, help='Path to the config file')
@@ -33,7 +35,7 @@ def dict2namespace(config):
 
 def training(config, device):
 
-# ---------------------------         Load dataloader        --------------------------------------
+# ---------------------------         Load the dataloader        --------------------------------------
 
     # Root directory for the dataset
     data_root = config.data.data_root
@@ -92,6 +94,11 @@ def training(config, device):
             n_samples += im.size(0)
 
         print("epoch:", epoch, "loss:", total_loss/n_samples)
+        isExist = os.path.exists(config.training.model_path)
+        if not isExist:
+
+        # Create a new directory because it does not exist
+            os.makedirs(config.training.model_path)
         if epoch%5 == 0:
             torch.save(unet.state_dict(), config.training.model_path+"ckpt"+str(epoch)+".pth")   
 
@@ -101,7 +108,7 @@ def training(config, device):
 
 
 
-# -----------------------------------------           Test   --------------------------------------------------
+# -----------------------------------------           Test         --------------------------------------------------
 
 def test(config, device):
 
@@ -122,6 +129,13 @@ def test(config, device):
     c, h, w = 1, config.data.image_size, config.data.image_size
     batch_size = 1
     im_noisy = torch.normal(0, 1, size=(batch_size,c,h,w)).to(device)
+    
+    isExist = os.path.exists("./outcomes")
+    if not isExist:
+
+        # Create a new directory because it does not exist
+        os.makedirs(config.training.model_path)
+
 
     for t in range(999,0,-1):
         t = torch.tensor(t).unsqueeze(0)
@@ -131,6 +145,7 @@ def test(config, device):
         e = unet(im_noisy, t_emb)
         im_noisy, x0 = LNS.sampling_from_xt_1( im_noisy, e, t)
         
+
         if t%110 == 1:
             
             ims = torch.clamp(im_noisy, -1., 1.).detach().cpu()
