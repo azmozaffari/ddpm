@@ -38,4 +38,16 @@ Here are some results on MNIST dataset:
     <td> <img src="./images/881.jpg" alt="9" width = 36px height = 36px ></td>    
     <td> <img src="./images/991.jpg" alt="10" width = 36px height = 36px ></td>
   </tr> 
+  <tr>
+    <td> <img src="./images/10.jpg"  alt="1" width = 36px height = 36px ></td>
+    <td> <img src="./images/1110.jpg"  alt="2" width = 36px height = 36px ></td>    
+    <td> <img src="./images/2210.jpg" alt="3" width = 36px height = 36px ></td>    
+    <td> <img src="./images/3310.jpg" alt="4" width = 36px height = 36px ></td>    
+    <td> <img src="./images/4410.jpg" alt="5" width = 36px height = 36px ></td>    
+    <td> <img src="./images/5510.jpg" alt="6" width = 36px height = 36px ></td>    
+    <td> <img src="./images/6610.jpg" alt="7" width = 36px height = 36px ></td>    
+    <td> <img src="./images/7710.jpg" alt="8" width = 36px height = 36px ></td>    
+    <td> <img src="./images/8810.jpg" alt="9" width = 36px height = 36px ></td>    
+    <td> <img src="./images/9910.jpg" alt="10" width = 36px height = 36px ></td>
+  </tr> 
 </table>
